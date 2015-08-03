@@ -18,4 +18,4 @@ User Stories:
 
 With this application, a user will log in and be able to ask a question. The Magic 8 Ball will provide an answer to the question. 
 
-<Once I figure out how to embed a link, a photo of my wireframe will be here.>
+Once I figure out how to embed a link, a photo of my wireframe will be here.
