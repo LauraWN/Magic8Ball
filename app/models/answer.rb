@@ -1,3 +1,3 @@
-class Answer < ActiveRecord::base
+class Answer < ActiveRecord::Base
   belongs_to  :question, dependent: :destroy
 end
