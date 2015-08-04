@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
+#for deploying on heroku, use the following gem:
+group :production do
+  gem 'rails_12factor'
+end
+
 #for authentication, use the following.
 gem 'devise'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
