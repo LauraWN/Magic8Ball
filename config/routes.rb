@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  devise_for :users
   resources :questions, expect: [:edit, :update]
   namespace :admin do #optional
     resources :answers
   end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
