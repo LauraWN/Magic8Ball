@@ -1,3 +1,3 @@
-class Question < ActiveRecord::base
+class Question < ActiveRecord::Base
   belongs_to  :user, dependent: :destroy
 end
