@@ -43,5 +43,5 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:question).permit(content)
   end
-  
+
 end

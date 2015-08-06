@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 
   #told to add following line for devise setup
   before_action :authenticate_user!
-  
+
   protect_from_forgery with: :exception
 end
