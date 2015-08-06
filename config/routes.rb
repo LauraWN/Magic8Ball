@@ -2,10 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   get 'users/new'
 
-  devise_for :users
-  resources :questions, expect: [:edit, :update]
-  namespace :admin do #optional
-    resources :answers
   end
 
 
