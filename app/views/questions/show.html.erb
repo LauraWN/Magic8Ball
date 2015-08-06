@@ -1,0 +1,16 @@
+<h2><%= @question.content %> <a href="/questions/"<%= @question.id %>/edit">(edit)</a></h2>
+
+<h4><%= @question.date %></h4>
+
+<h3>Answer <%= link_to "(+)", new_question_answer_path(@question) %></h3>
+
+
+<ul>
+    <%= @question.answers.each do |answer| %>
+      <li>
+        <%= link_to "#{answer.content} (#{answer.date})", question_answer_path(@question, answer) %>
+      </li>
+
+    <% end %>
+
+</ul>

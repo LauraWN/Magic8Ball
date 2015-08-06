@@ -1,4 +1,12 @@
 <h1>Answers</h1>
 
+<ul>
+    <% @answers.each do |answer| %>
+    <li>
+      <%= link_to "#{answer.content} - #{answer.question.content}",question_answer_path(answer.question,answer) %>
+    </li>
+
+  <% end %>
 
   <%= answer %>
+</ul>

@@ -1,0 +1,18 @@
+<h2>Edit Answer</h2>
+
+<form action="/answers/<%= @ansawer.id>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="answer[content]">Content:</label>
+  <input name="answer[content]" value="<%= @answer.content %>">
+
+  <label for="answer[timestamp]">Timestamp:</label>
+  <input name="answer[timestamp]" value="<%= @answer.timestamp %>">
+
+  <input type="Submit" value="Create">
+</form>
+
+<form action="/answers/<%= @answer.id %>" method="answer">
+  <input type="answer" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete!">
+</form>
