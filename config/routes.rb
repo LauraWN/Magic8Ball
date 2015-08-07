@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  root 'questions#index'
+  get '/questions/create' => "questions#create"
+  resource :answer do
 
+  end
 
 
 
