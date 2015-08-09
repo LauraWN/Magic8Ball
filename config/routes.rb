@@ -2,13 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'questions#index'
-  get '/questions/create' => "questions#create"
-  resource :answer do
+  # get '/questions/create' => "questions#create"
 
-  end
+  resources :questions
+  resource :answers
 
-
-
+  get 'myanswer' => 'answers#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

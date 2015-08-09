@@ -2,10 +2,7 @@
 <ul>
   <% @questions.each do |question| %>
     <li>
-      <%= link_to question %>
-      <a href="/questions/<%= question.id %>">
-        <%= question.content %>
-      </a>
+      <%= link_to question.content, question %>
     </li>
   <% end %>
 </ul>

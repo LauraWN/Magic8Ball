@@ -1,4 +1,5 @@
 class AnswersController < ApplicationController
+  # before_action :authenticate_user!, except: [:show]
 
   def index
     @answers = Answer.all
@@ -19,7 +20,12 @@ class AnswersController < ApplicationController
 
     #show
     def show
-      @answer = Answer.find(params[:id])
+      @answers = Answer.all
+
+      @answers.each do |answer|
+        @answer = answer
+      end
+      # @answer = Answer.find(params[:id])
     end
 
     #edit

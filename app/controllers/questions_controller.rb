@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  # before_action :find_question, only: [:show, :edit, :update, :destroy]
 
   def index
     @questions = Question.all
@@ -11,8 +12,20 @@ class QuestionsController < ApplicationController
 
   #create
   def create
-    @question Question.create!(question_params)
-    redirect_to (question_path(@question))
+    i = 1
+    @answer = Answer.find(i)
+    @question = Question.new(question_params)
+
+    if @question.save
+      i = i + 1
+      redirect_to myanswer_path(@answer)
+    else
+      render :new
+    end
+
+    # @question = Question.create!(question_params)
+
+#    redirect_to (question_path(@question))
   end
 
   #show
@@ -40,8 +53,13 @@ class QuestionsController < ApplicationController
   end
 
   private
+
+  def find_question
+      @question = Question.find(params[:id])
+  end
+
   def question_params
-    params.require(:question).permit(content)
+    params.require(:question).permit(:content)
   end
 
 end
