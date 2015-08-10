@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   # before_action :find_question, only: [:show, :edit, :update, :destroy]
 
+#index
   def index
     @questions = Question.all
   end
@@ -10,24 +11,16 @@ class QuestionsController < ApplicationController
     @question = Question.new
   end
 
+#show
+  def show
+    @question = Question.find(params[:id])
+  end
+
   #create
   def create
-    #i = 1
-    #@answer = Answer.find(i)
-    #@question = Question.new(question_params)
-
-    #if @question.save
-      #i = i + 1
       @answer = Answer.all.sample
       redirect_to myanswer_path(@answer)
-      #else
-      #render :new
-    end
-
-    # @question = Question.create!(question_params)
-
-#    redirect_to (question_path(@question))
-  #end
+  end
 
   #show
   def show
@@ -48,7 +41,7 @@ class QuestionsController < ApplicationController
 
   #destroy
   def destroy
-    @question = question.find(params[:id])
+    @question = Question.find(params[:id])
     @question.destroy
     redirect_to questions_path
   end

@@ -1,6 +1,7 @@
-background: {
-            url('/images/magic8ball-closeup.jpg');
-}
+body {
+  background-image: url(image_path('magic8ball-closeup.jpg'));
+  background-size: cover;
+  }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

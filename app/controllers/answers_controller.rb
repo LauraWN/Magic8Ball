@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
       redirect_to question_answer_path(@question, @answer)
     end
 
-    #show
+    #show--the random answer.
     def show
       @answer = Answer.all.sample
     end
