@@ -20,13 +20,9 @@ class AnswersController < ApplicationController
 
     #show
     def show
-      @answers = Answer.all
-
-      @answers.each do |answer|
-        @answer = answer
-      end
-      # @answer = Answer.find(params[:id])
+      @answer = Answer.all.sample
     end
+
 
     #edit
     def edit

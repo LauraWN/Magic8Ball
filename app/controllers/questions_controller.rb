@@ -12,21 +12,22 @@ class QuestionsController < ApplicationController
 
   #create
   def create
-    i = 1
-    @answer = Answer.find(i)
-    @question = Question.new(question_params)
+    #i = 1
+    #@answer = Answer.find(i)
+    #@question = Question.new(question_params)
 
-    if @question.save
-      i = i + 1
+    #if @question.save
+      #i = i + 1
+      @answer = Answer.all.sample
       redirect_to myanswer_path(@answer)
-    else
-      render :new
+      #else
+      #render :new
     end
 
     # @question = Question.create!(question_params)
 
 #    redirect_to (question_path(@question))
-  end
+  #end
 
   #show
   def show
