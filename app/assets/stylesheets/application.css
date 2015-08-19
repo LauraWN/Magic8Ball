@@ -18,3 +18,25 @@
  *= require_tree .
  *= require_self
  */
+
+ .triangle {
+ 	width: 0;
+ 	height: 0;
+ 	border-left: 113px solid transparent;
+ 	border-right: 113px solid transparent;
+ 	border-top: 200px solid #4b3ec7;
+  text-align: top;
+ }
+ .triangle p {
+     text-align: center;
+     top: -190px;
+     left: -47px;
+     position: relative;
+     width: 93px;
+     height: 93px;
+     margin: 0px;
+     color: snow;
+     transition: opacity 1s ease;
+     font-family: 'PT Mono', ;
+     transition: visibility 0s 2s, opacity 2s linear
+ }
