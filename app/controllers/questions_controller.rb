@@ -18,6 +18,8 @@ class QuestionsController < ApplicationController
 
   #create
   def create
+    # mms:  ah!  Here it is.  Wait.  Why isn't it associating this random answer with the newly created Question?  We are in Question#create after all?
+    # mms:    No need to go somewhere else (redirect_to), just associate them right here.
       @answer = Answer.all.sample
       redirect_to myanswer_path(@answer)
   end

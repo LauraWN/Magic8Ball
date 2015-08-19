@@ -19,6 +19,9 @@ class AnswersController < ApplicationController
     end
 
     #show--the random answer.
+    # mms: this action is probably better used to show a possible answer from your table of answers.
+    # mms:  Where should we be associating a randomly selected answer with the question that was just asked?
+    # mms:     Or, put another way, when the user types in a Question and hits "Create Question"  what happens next?  Where in that process should we get a random answer and associate it with the newly created Question?
     def show
       @answer = Answer.all.sample
     end
@@ -30,6 +33,8 @@ class AnswersController < ApplicationController
     end
 
     #update
+    # mms: similarly, this should be used to update an existing, possible answer.  Rather than updating an answer to assign it to a question. 
+    # mms:   This looks like you were expecting an answer to be associated with one, and only one, question.
     def update
       @answer = Answer.find(params[:id])
       @question = Question.find(params[:question_id])
